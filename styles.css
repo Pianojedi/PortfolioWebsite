@@ -1,45 +1,63 @@
-/* Reset some default browser styles */
+/* Reset default margins/padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set up basic font and background */
+/* Body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #ffffff;
+    color: #1c1c1e;
     line-height: 1.6;
     padding: 20px;
 }
 
-/* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    color: #1c1c1e;
+    padding: 5px 0;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e5ea;
 }
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 24px;
+    margin: 0;
 }
+
 
 header p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-size: 1rem;
+    margin: 0;
+    display: none;
 }
 
-/* Navigation styles */
+/* Navigation */
 nav {
-    margin-top: 15px;
+    margin-top: 0;
 }
 
 nav a {
-    color: #fff;
+    color: #007aff;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 12px;
     font-weight: bold;
 }
 
@@ -49,25 +67,40 @@ nav a:hover {
 
 /* Section styles */
 section {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    margin: 80px 0;
+    scroll-margin-top: 80px;
 }
 
-/* Project card style */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;   /* small padding on left/right for breathing room */
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Section headings */
+section h2, section h3 {
+    color: #1c1c1e;
+}
+
+/* Project cards */
 .project {
     margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fafafa;
+    padding: 20px;
+    background-color: rgba(245, 245, 245, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .project a {
     display: inline-block;
     margin-top: 10px;
-    color: #007BFF;
+    color: #007aff;
+    font-weight: bold;
 }
 
 .project a:hover {
@@ -78,9 +111,14 @@ section {
 #contact a {
     display: block;
     margin: 10px 0;
-    color: #007BFF;
+    color: #007aff;
 }
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
 }
