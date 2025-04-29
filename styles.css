@@ -94,48 +94,67 @@ nav a:hover {
 }
 
 /* About Section Format */
-.about-split {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-    padding: 60px 80px;
-    background-color: #f8f8f8;
+.new-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 300px;
+  gap: 20px;
+  background-color: #f8f8f8;
+  flex-wrap: wrap;
 }
 
-.about-left,
-.about-right {
-    flex: 1;
-    padding: 20px;
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  min-width: 280px;
 }
 
-.intro-text {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
+.about-left .intro-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
 }
 
 .about-left h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0;
-    color: #1c1c1e;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  color: #1c1c1e;
 }
 
 .about-left h2 {
-    font-size: 1.2rem;
-    color: #777;
-    margin-top: 10px;
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  min-width: 280px;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
 }
 
 .about-paragraph {
-    font-size: 1.25rem;
-    line-height: 2;
-    font-weight: 400;
-    color: #333;
-    max-width: 520px;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #333;
+  max-width: 500px;
 }
 
 
