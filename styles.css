@@ -51,6 +51,15 @@ header p {
     display: none;
 }
 
+#about {
+    margin-top: 0;
+    scroll-margin-top: 80px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
 /* Navigation */
 nav {
     margin-top: 0;
@@ -112,6 +121,8 @@ nav a:hover {
     max-width: 520px;
 }
 
+
+
 /* Section spacing */
 section {
     margin: 80px 0;
@@ -167,8 +178,6 @@ section h2, section h3 {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
-
-
 
 
 /* List spacing */
