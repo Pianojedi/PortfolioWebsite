@@ -8,15 +8,18 @@
 /* Body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom right, #dfe9f3, #ffffff); /* fixed */
     color: #1c1c1e;
     line-height: 1.6;
-    padding: 20px;
+    padding: 0; /* fixed */
 }
 
+/* Header */
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%; /* ensure full width */
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: #1c1c1e;
     padding: 5px 0;
     text-align: center;
@@ -26,7 +29,7 @@ header {
     border-bottom: 1px solid #e5e5ea;
 }
 
-
+/* Header Container */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -36,12 +39,11 @@ header {
     padding: 0 20px;
 }
 
-
+/* Header Text */
 header h1 {
     font-size: 24px;
     margin: 0;
 }
-
 
 header p {
     font-size: 1rem;
@@ -65,30 +67,35 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Section styles */
+/* Section spacing */
 section {
     margin: 80px 0;
     scroll-margin-top: 80px;
 }
 
+/* Section Container */
 .section-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 20px;   /* small padding on left/right for breathing room */
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
-
-/* Section headings */
+/* Section Headings */
 section h2, section h3 {
     color: #1c1c1e;
 }
 
 /* Project cards */
 .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-top: 20px;
     padding: 20px;
     background-color: rgba(245, 245, 245, 0.8);
@@ -103,20 +110,150 @@ section h2, section h3 {
     font-weight: bold;
 }
 
-.project a:hover {
-    text-decoration: underline;
+.project:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact links */
-#contact a {
-    display: block;
-    margin: 10px 0;
+
+
+
+/* List spacing */
+ul {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Layout for Contact Section */
+.contact-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Left Side (Contact Buttons) */
+.contact-left {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Move the buttons down */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.contact-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #007aff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px);
+}
+
+.contact-links i {
+    font-size: 1.2rem;
+}
+
+/* Right Side (Contact Info List) */
+.contact-right {
+    flex: 1;
+    min-width: 250px;
+    padding-left: 40px;
+}
+
+.contact-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+}
+
+.contact-right li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.contact-right i {
+    color: #007aff;
+    font-size: 1.2rem;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-category {
+    background-color: rgba(245, 245, 245, 0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category h3 {
+    margin-bottom: 10px;
     color: #007aff;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+.skill-category ul {
+    list-style: none;
+    padding: 0;
 }
+
+.skill-category li {
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+.skill-category li i {
+    margin-right: 8px;
+    color: #007aff;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #1c1c1e;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    border-top: 1px solid #e5e5ea;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 
 /* Smooth scrolling */
 html {
