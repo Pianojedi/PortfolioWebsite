@@ -8,15 +8,15 @@
 /* Body */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #dfe9f3, #ffffff); /* fixed */
+    background: linear-gradient(to bottom right, #dfe9f3, #ffffff);
     color: #1c1c1e;
     line-height: 1.6;
-    padding: 0; /* fixed */
+    padding: 0;
 }
 
 /* Header */
 header {
-    width: 100%; /* ensure full width */
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -67,6 +67,51 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* About Section Format */
+.about-split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 60px 80px;
+    background-color: #f8f8f8;
+}
+
+.about-left,
+.about-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.about-left h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    color: #1c1c1e;
+}
+
+.about-left h2 {
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+.about-paragraph {
+    font-size: 1.25rem;
+    line-height: 2;
+    font-weight: 400;
+    color: #333;
+    max-width: 520px;
+}
+
 /* Section spacing */
 section {
     margin: 80px 0;
@@ -78,11 +123,19 @@ section {
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent */
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section-container.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Section Headings */
